@@ -1,0 +1,21 @@
+/web/bundles/
+/app/bootstrap.php.cache
+/app/cache/*
+/app/config/parameters.yml
+/app/logs/*
+/build/
+/vendor/
+/bin/
+/composer.phar
+
+web/uploads/*
+web/bundles/*
+web/css/*
+web/js/*
+web/images/*
+
+# phpStorm project files
+.idea
+
+.DS_Store
+app/.DS_Store
