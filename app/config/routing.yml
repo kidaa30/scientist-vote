@@ -1,0 +1,4 @@
+science_popularity:
+    resource: "@SciencePopularityBundle/Resources/config/routing.yml"
+    prefix:   /
+

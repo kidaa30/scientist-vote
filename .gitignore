@@ -8,11 +8,7 @@
 /bin/
 /composer.phar
 
-web/uploads/*
-web/bundles/*
-web/css/*
-web/js/*
-web/images/*
+web/
 
 # phpStorm project files
 .idea

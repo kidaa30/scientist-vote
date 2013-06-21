@@ -1,0 +1,7 @@
+parameters:
+#    science_popularity.example.class: Science\PopularityBundle\Example
+
+services:
+#    science_popularity.example:
+#        class: %science_popularity.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
