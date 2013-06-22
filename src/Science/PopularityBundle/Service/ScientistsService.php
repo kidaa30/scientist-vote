@@ -50,7 +50,7 @@ class ScientistsService
     public function set($id, Scientist $scientist)
     {
         try {
-            return $this->storageService->set($id, $scientist->toJson);
+            return $this->storageService->set($id, json_encode($scientist));
         }
         catch (StorageException $e) {
             throw new ServiceException($e->getMessage());

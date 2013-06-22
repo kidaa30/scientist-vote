@@ -45,7 +45,7 @@ class DefaultController extends Controller
         return new Response($json, 200);
     }
 
-    public function putScientistsAction()
+    public function putScientistsAction($id)
     {
         try {
             $json = $this->getRequest()->getContent();
@@ -53,7 +53,7 @@ class DefaultController extends Controller
             $scientist = $factory->create($json);
 
             $scientistsService = $this->get('science_popularity.scientists');
-            $scientistsService->set($scientist);
+            $scientistsService->set($id, $scientist);
         }
         catch (ServiceException $e) {
             return $this->jsonError($e);

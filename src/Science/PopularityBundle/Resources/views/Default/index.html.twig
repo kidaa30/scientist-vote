@@ -1,1 +1,24 @@
-Popularity Vote!
+<!doctype html>
+<html ng-app="VoteApp">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js"></script>
+  {% block stylesheets %}
+    <link href="{{ asset('bundles/sciencepopularity/css/vote.css') }}" type="text/css" rel="stylesheet" />
+  {% endblock %}
+</head>
+<body>
+<div ng-controller="VoteCtrl" ng-init="initScientists()">
+  <ul>
+    <li ng-repeat="scientist in scientists">
+      <span ng-model="scientist.name">[[scientist.votes]]</span>
+    </li>
+  </ul>
+</div>
+<div ng-view></div>
+{% block javascripts %}
+  <script src="{{ asset('bundles/sciencepopularity/js/vote.js') }}" type="text/javascript"></script>
+  <script src="{{ asset('bundles/sciencepopularity/js/controllers.js') }}" type="text/javascript"></script>
+  <script src="{{ asset('bundles/sciencepopularity/js/services.js') }}" type="text/javascript"></script>
+{% endblock %}
+</body>
+</html>
