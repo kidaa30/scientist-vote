@@ -10,7 +10,7 @@
 <div ng-controller="VoteCtrl" ng-init="initScientists()">
   <ul>
     <li ng-repeat="scientist in scientists">
-      <span ng-model="scientist.name">[[scientist.votes]]</span>
+      <span>[[scientist.name]] - [[scientist.votes]]</span>
     </li>
   </ul>
 </div>

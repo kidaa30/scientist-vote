@@ -6,7 +6,13 @@ angular.module('VoteApp.controllers', []).
 
       $scope.initScientists = function() {
         ScientistsService.async().then(function(data) {
-          scientists = data;
+          //scientists = data;
+
+          for (var i=0;i < data.length; i++) {
+            var scientist = JSON.parse(data[i]);
+            scientists.push(scientist);
+          }
+          console.log(scientists);
         });
       };
     }]);
