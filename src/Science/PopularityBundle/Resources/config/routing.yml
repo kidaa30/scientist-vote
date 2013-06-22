@@ -1,15 +1,16 @@
+science_popularity_scientists_put:
+    pattern:  /scientists/{id}
+    defaults: { _controller: SciencePopularityBundle:Default:putScientists }
+    methods: [PUT]
+    requirements:
+        _format: json
+
 science_popularity_scientists_get:
     pattern:  /scientists/{id}
     defaults: { _controller: SciencePopularityBundle:Default:getScientists, id: null }
-    requirements:
-        _method: GET
-
-science_popularity_scientists_put:
-    pattern:  /scientists/{:id}
-    defaults: { _controller: SciencePopularityBundle:Default:putScientists }
-    requirements:
-        _method: PUT
+    methods: [GET]
 
 science_popularity_homepage:
-    pattern:  /foo
+    pattern:  /
     defaults: { _controller: SciencePopularityBundle:Default:index }
+    methods: [GET]
